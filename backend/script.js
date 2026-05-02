@@ -33,3 +33,35 @@ window.addEventListener('scroll', () => {
     l.style.color = l.getAttribute('href') === '#' + cur ? 'var(--cyan)' : '';
   });
 });
+
+// ===== BACKEND CONNECTION =====
+const API_URL = "https://khan-6exn.onrender.com";
+
+// Example test call
+async function testBackend() {
+  try {
+    const res = await fetch(`${API_URL}/`);
+    const data = await res.text();
+    console.log("Backend response:", data);
+  } catch (err) {
+    console.error("Backend error:", err);
+  }
+}
+
+testBackend();
+
+const express = require("express");
+const cors = require("cors");
+
+const app = express();
+
+app.use(cors()); // allow frontend
+
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log("Server running on port", PORT);
+});
