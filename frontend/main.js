@@ -11,4 +11,4 @@ async function testBackend() {
     console.error("Backend error:", err);
   }
 }
-testBackend();
+// testBackend();
