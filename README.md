@@ -14,7 +14,7 @@ I enjoy solving real-world problems through code and continuously improving my s
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech
 
 * **Frontend:** HTML, CSS, JavaScript
 * **Deployment:** Vercel
